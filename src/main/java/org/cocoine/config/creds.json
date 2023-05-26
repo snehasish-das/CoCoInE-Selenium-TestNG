@@ -1,0 +1,13 @@
+{
+  "env":{
+    "JIRA" : "<<JIRA_URL>>"
+  },
+  "users": [
+    {
+      "JIRA": {
+        "username": "<<JIRA_USER>>",
+        "password": "<<JIRA_PASS>>"
+      }
+    }
+  ]
+}
