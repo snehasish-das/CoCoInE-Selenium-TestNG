@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="cocoine-sanity-suite" parallel="false">
+    <listeners>
+        <listener class-name="org.cocoine.core.TestListener"/>
+    </listeners>
+    <test name="sanity-tests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="org.cocoine.tests.api.SampleApiTest"/>
+            <class name="org.cocoine.tests.api.GoRestApiTest"/>
+            <class name="org.cocoine.tests.ui.SampleUiTest"/>
+            <class name="org.cocoine.tests.ui.GoRestUiTest"/>
+        </classes>
+    </test>
+</suite>

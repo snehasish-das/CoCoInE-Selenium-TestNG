@@ -1,105 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-10-12T07:26:27 IST" name="Surefire suite" finished-at="2026-10-12T07:26:28 IST" duration-ms="48">
+  <suite started-at="2026-10-12T08:28:05 IST" name="Surefire suite" finished-at="2026-10-12T08:28:09 IST" duration-ms="3625">
     <groups>
-      <group name="P1">
-        <method signature="GoRestApiCrudTest.gorestApiCrudPolicyGatedFlow()[pri:0, instance:org.cocoine.tests.api.GoRestApiCrudTest@5d05ef57]" name="gorestApiCrudPolicyGatedFlow" class="org.cocoine.tests.api.GoRestApiCrudTest"/>
-      </group> <!-- P1 -->
-      <group name="regression">
-        <method signature="GoRestApiCrudTest.gorestApiCrudPolicyGatedFlow()[pri:0, instance:org.cocoine.tests.api.GoRestApiCrudTest@5d05ef57]" name="gorestApiCrudPolicyGatedFlow" class="org.cocoine.tests.api.GoRestApiCrudTest"/>
-      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="GoRestApiTest.getUsersList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" name="getUsersList" class="org.cocoine.tests.api.GoRestApiTest"/>
+      </group> <!-- smoke -->
+      <group name="api">
+        <method signature="GoRestApiTest.getCommentsList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" name="getCommentsList" class="org.cocoine.tests.api.GoRestApiTest"/>
+        <method signature="GoRestApiTest.getPostsList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" name="getPostsList" class="org.cocoine.tests.api.GoRestApiTest"/>
+        <method signature="GoRestApiTest.getSingleUserFromList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" name="getSingleUserFromList" class="org.cocoine.tests.api.GoRestApiTest"/>
+        <method signature="GoRestApiTest.getTodosList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" name="getTodosList" class="org.cocoine.tests.api.GoRestApiTest"/>
+        <method signature="GoRestApiTest.getUsersList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" name="getUsersList" class="org.cocoine.tests.api.GoRestApiTest"/>
+      </group> <!-- api -->
     </groups>
-    <test started-at="2026-10-12T07:26:27 IST" name="Surefire test" finished-at="2026-10-12T07:26:28 IST" duration-ms="48">
-      <class name="org.cocoine.tests.api.GoRestApiCrudTest">
-        <test-method is-config="true" signature="requireToken()[pri:0, instance:org.cocoine.tests.api.GoRestApiCrudTest@5d05ef57]" started-at="2026-10-12T07:26:27 IST" name="requireToken" finished-at="2026-10-12T07:26:27 IST" duration-ms="5" status="SKIP">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[GOREST_TOKEN is required for GoREST write API tests.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: GOREST_TOKEN is required for GoREST write API tests.
-at org.cocoine.tests.api.GoRestApiCrudTest.requireToken(GoRestApiCrudTest.java:32)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+    <test started-at="2026-10-12T08:28:05 IST" name="Surefire test" finished-at="2026-10-12T08:28:09 IST" duration-ms="3625">
+      <class name="org.cocoine.tests.api.GoRestApiTest">
+        <test-method signature="getCommentsList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" started-at="2026-10-12T08:28:05 IST" name="getCommentsList" description="API TC_04 - Get comments list" finished-at="2026-10-12T08:28:06 IST" duration-ms="1309" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- requireToken -->
-        <test-method signature="gorestApiCrudPolicyGatedFlow()[pri:0, instance:org.cocoine.tests.api.GoRestApiCrudTest@5d05ef57]" started-at="2026-10-12T07:26:28 IST" name="gorestApiCrudPolicyGatedFlow" description="TC_02 through TC_11 - Policy-gated API CRUD flow" finished-at="2026-10-12T07:26:28 IST" duration-ms="0" status="SKIP">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[GOREST_TOKEN is required for GoREST write API tests.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: GOREST_TOKEN is required for GoREST write API tests.
-at org.cocoine.tests.api.GoRestApiCrudTest.requireToken(GoRestApiCrudTest.java:32)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+        </test-method> <!-- getCommentsList -->
+        <test-method signature="getPostsList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" started-at="2026-10-12T08:28:06 IST" name="getPostsList" description="API TC_03 - Get posts list" finished-at="2026-10-12T08:28:07 IST" duration-ms="459" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- gorestApiCrudPolicyGatedFlow -->
-      </class> <!-- org.cocoine.tests.api.GoRestApiCrudTest -->
+        </test-method> <!-- getPostsList -->
+        <test-method signature="getSingleUserFromList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" started-at="2026-10-12T08:28:07 IST" name="getSingleUserFromList" description="API TC_02 - Get a single user from list" finished-at="2026-10-12T08:28:08 IST" duration-ms="1128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSingleUserFromList -->
+        <test-method signature="getTodosList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" started-at="2026-10-12T08:28:08 IST" name="getTodosList" description="API TC_05 - Get todos list" finished-at="2026-10-12T08:28:08 IST" duration-ms="294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTodosList -->
+        <test-method signature="getUsersList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" started-at="2026-10-12T08:28:08 IST" name="getUsersList" description="API TC_01 - Get users list" finished-at="2026-10-12T08:28:09 IST" duration-ms="420" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUsersList -->
+      </class> <!-- org.cocoine.tests.api.GoRestApiTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>

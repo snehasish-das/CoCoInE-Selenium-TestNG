@@ -5,20 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.cocoine</groupId>
-    <artifactId>ai-ready-selenium-restassured-framework</artifactId>
+    <artifactId>cocoine-selenium-testng</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.release>11</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <suiteXmlFile>src/test/resources/suites/testng.xml</suiteXmlFile>
-        <threadCount>4</threadCount>
-        <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
+        <suiteXmlFile>testng.xml</suiteXmlFile>
         <selenium.version>4.27.0</selenium.version>
         <testng.version>7.10.2</testng.version>
         <restassured.version>5.5.0</restassured.version>
-        <allure.version>2.29.1</allure.version>
         <jackson.version>2.18.2</jackson.version>
     </properties>
 
@@ -34,24 +31,9 @@
             <version>${restassured.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>json-schema-validator</artifactId>
-            <version>${restassured.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-testng</artifactId>
-            <version>${allure.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-rest-assured</artifactId>
-            <version>${allure.version}</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -59,42 +41,9 @@
             <version>${jackson.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.networknt</groupId>
-            <artifactId>json-schema-validator</artifactId>
-            <version>1.5.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.awaitility</groupId>
-            <artifactId>awaitility</artifactId>
-            <version>4.2.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.javafaker</groupId>
-            <artifactId>javafaker</artifactId>
-            <version>1.0.2</version>
-        </dependency>
-        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.36</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.tomakehurst</groupId>
-            <artifactId>wiremock-jre8-standalone</artifactId>
-            <version>2.35.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>au.com.dius.pact.consumer</groupId>
-            <artifactId>junit5</artifactId>
-            <version>4.6.15</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>3.27.2</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -123,42 +72,6 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
-                    <systemPropertyVariables>
-                        <allure.results.directory>${allure.results.directory}</allure.results.directory>
-                        <threadCount>${threadCount}</threadCount>
-                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
-                    </systemPropertyVariables>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-maven</artifactId>
-                <version>2.15.2</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>3.6.0</version>
-                <configuration>
-                    <configLocation>google_checks.xml</configLocation>
-                    <consoleOutput>true</consoleOutput>
-                    <failsOnError>false</failsOnError>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>com.github.spotbugs</groupId>
-                <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>4.8.6.6</version>
-                <configuration>
-                    <failOnError>false</failOnError>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.owasp</groupId>
-                <artifactId>dependency-check-maven</artifactId>
-                <version>12.1.0</version>
-                <configuration>
-                    <failBuildOnCVSS>9</failBuildOnCVSS>
                 </configuration>
             </plugin>
         </plugins>
@@ -166,30 +79,9 @@
 
     <profiles>
         <profile>
-            <id>local</id>
-            <properties>
-                <env>local</env>
-                <suiteXmlFile>src/test/resources/suites/testng.xml</suiteXmlFile>
-            </properties>
-        </profile>
-        <profile>
             <id>sanity</id>
             <properties>
-                <suiteXmlFile>src/test/resources/suites/sanity-suite.xml</suiteXmlFile>
-            </properties>
-        </profile>
-        <profile>
-            <id>ci</id>
-            <properties>
-                <suiteXmlFile>src/test/resources/suites/ci-suite.xml</suiteXmlFile>
-                <threadCount>6</threadCount>
-            </properties>
-        </profile>
-        <profile>
-            <id>prod</id>
-            <properties>
-                <suiteXmlFile>src/test/resources/suites/prod-suite.xml</suiteXmlFile>
-                <threadCount>2</threadCount>
+                <suiteXmlFile>sanity-suite.xml</suiteXmlFile>
             </properties>
         </profile>
         <profile>
@@ -197,13 +89,6 @@
             <properties>
                 <remote>true</remote>
                 <gridUrl>http://localhost:4444/wd/hub</gridUrl>
-            </properties>
-        </profile>
-        <profile>
-            <id>aws</id>
-            <properties>
-                <remote>true</remote>
-                <suiteXmlFile>src/test/resources/suites/ci-suite.xml</suiteXmlFile>
             </properties>
         </profile>
     </profiles>

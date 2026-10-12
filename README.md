@@ -1,91 +1,75 @@
-# AI-Ready Selenium 4 + Rest Assured Framework
+# CoCoInE Selenium TestNG
 
-This repository is a scalable Java automation framework for UI, API, contract, component,
-integration, and E2E testing. It is designed for human and AI-assisted development with strict
-conventions, review gates, and machine-readable metadata.
+A simple, generic Java automation framework using Selenium 4, TestNG, and Rest Assured.
+
+The framework is intentionally small and readable. Page objects and REST wrappers contain actions;
+tests contain assertions.
 
 ## Tech Stack
 
-- Java 11 compatible source
+- Java 11
 - Maven
-- TestNG
 - Selenium 4
+- TestNG
 - Rest Assured
-- Allure Reports
-- Selenium Manager for native Selenium 4 driver resolution
 - Jackson
-- WireMock and Pact-ready test dependencies
-- Jenkins, Docker Compose Selenium Grid, and AWS/Jenkins agent support
+- SLF4J Simple
 
-## Run Locally
+## Project Layout
+
+- `src/main/java/org/cocoine/core` - base UI/API helpers, config loading, and listeners
+- `src/main/java/org/cocoine/pages/ui` - Selenium page objects
+- `src/main/java/org/cocoine/pages/rest` - REST wrapper classes
+- `src/main/resources/config` - framework configuration
+- `src/main/resources/locators` - JSON locator files
+- `src/test/java/org/cocoine/tests` - TestNG tests
+- `src/test/resources/testData` - test data files
+- `testng.xml` and `sanity-suite.xml` - TestNG suites
+
+## Run Tests
 
 ```bash
 mvn test
 mvn test -Psanity
-mvn test -Pprod -Denv=prod-like
-mvn test -Dtest=SampleApiTest#getEndpointReturnsSuccess
-mvn test -Dtest=GoRestApiReadTest
-GOREST_TOKEN=your-token mvn test -Dtest=GoRestApiCrudTest
+mvn test -Dtest=SampleApiTest
+mvn test -Dtest=SampleUiTest#homePageLoads
 ```
 
-## Useful Parameters
+## Common Parameters
 
 ```bash
 mvn test \
-  -Denv=qa \
+  -DbaseUrl=https://example.org \
+  -DapiBaseUrl=https://httpbin.org \
   -Dbrowser=chrome \
-  -DthreadCount=4 \
-  -Dremote=false
+  -Dheadless=true
 ```
 
-GoREST write tests require `GOREST_TOKEN`. Without it, the write-flow tests are skipped with a clear reason.
-
-For Grid:
+For Selenium Grid:
 
 ```bash
-docker compose -f grid/docker-compose.yml up -d
 mvn test -Pgrid -Dremote=true -DgridUrl=http://localhost:4444/wd/hub
 ```
 
-## Reports
+## Configuration
 
-Allure results are written to `target/allure-results`.
+`src/main/resources/config/config.json` uses generic keys:
 
-```bash
-mvn allure:serve
-```
+- `Environment.baseUrl`
+- `Environment.apiBaseUrl`
+- `Environment.browser`
+- `Environment.remote`
+- `Environment.gridUrl`
+- `Environment.timeoutSeconds`
+- `Applications.<appName>`
+- `Users.<userRole>`
 
-## Test Groups
+System properties override config values where supported.
 
-Supported groups:
+## Writing Tests
 
-- `sanity`
-- `smoke`
-- `regression`
-- `BAT`
-- `P1`
-- `P2`
-- `contract`
-- `component`
-- `integration`
-- `e2e`
-- `critical`
+UI tests should extend `BaseClass`, create page objects with `getDriver()`, perform actions through
+page methods, and keep assertions inside the test.
 
-Production-like runs should use the `prod` profile. The production suite includes read-only
-checks and policy-gated flows that stop before restricted steps.
-
-## Project Layout
-
-- `src/main/java/org/cocoine/framework`: reusable framework code
-- `src/main/resources/config`: environment and credential placeholders
-- `src/main/resources/locators`: JSON locators by module/page
-- `src/test/java/org/cocoine/tests`: UI, API, contract, component, integration, and E2E tests
-- `src/test/resources/testData`: JSON data-provider files
-- `src/test/resources/suites`: TestNG suite files
-- `docs`: framework and AI development guidance
-- `grid`: Selenium Grid Docker Compose file
-
-## Security
-
-Do not hardcode credentials, tokens, API keys, or environment-specific secrets. Use Jenkins
-credentials, environment variables, AWS Secrets Manager, or Vault.
+API tests should call wrapper classes under `org.cocoine.pages.rest` and assert response status/body
+inside the test.
