@@ -1,0 +1,7 @@
+{
+  "records": [
+    {
+      "query": "automation {{RANDOM_STRING}}"
+    }
+  ]
+}

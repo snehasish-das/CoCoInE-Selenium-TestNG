@@ -1,0 +1,16 @@
+org/cocoine/framework/data/JsonDataProvider$1.class
+org/cocoine/framework/data/JsonDataProvider.class
+org/cocoine/framework/config/FrameworkConfig.class
+org/cocoine/framework/pages/sample/SamplePage.class
+org/cocoine/framework/reporting/AllureAttachments.class
+org/cocoine/framework/util/JsonLoader.class
+org/cocoine/framework/util/RandomData.class
+org/cocoine/framework/ui/LocatorRepository.class
+org/cocoine/framework/util/JsonSchemaValidator.class
+org/cocoine/framework/util/JsonLoader$1.class
+org/cocoine/framework/listener/FrameworkListener.class
+org/cocoine/framework/driver/DriverManager.class
+org/cocoine/framework/api/RestClient.class
+org/cocoine/framework/api/AuthSupport.class
+org/cocoine/framework/ui/SeleniumActions.class
+org/cocoine/framework/logging/FrameworkLogger.class

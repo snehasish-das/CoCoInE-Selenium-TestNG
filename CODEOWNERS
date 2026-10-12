@@ -1,0 +1,7 @@
+* @qa-automation
+/src/main/java/org/cocoine/framework/ @framework-owners
+/src/main/java/org/cocoine/framework/api/ @api-quality-owners
+/src/test/resources/contracts/ @contract-owners
+/src/main/resources/config/ @security-owners
+/.github/ @devops-owners
+/Jenkinsfile @devops-owners

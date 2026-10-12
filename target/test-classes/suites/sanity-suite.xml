@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="sanity-suite" parallel="methods" thread-count="4">
+    <listeners>
+        <listener class-name="org.cocoine.framework.listener.FrameworkListener"/>
+    </listeners>
+    <test name="sanity-tests">
+        <groups>
+            <run>
+                <include name="sanity"/>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="org.cocoine.tests.*"/>
+        </packages>
+    </test>
+</suite>

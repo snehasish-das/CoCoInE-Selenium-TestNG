@@ -1,0 +1,54 @@
+{
+  "defaults": {
+    "browser": "chrome",
+    "remote": "false",
+    "gridUrl": "http://localhost:4444/wd/hub",
+    "timeoutSeconds": "20"
+  },
+  "environments": {
+    "local": {
+      "restBaseUrl": "https://gorest.co.in/public/v2",
+      "apps": {
+        "admin": "https://gorest.co.in/",
+        "gorest": "https://gorest.co.in/",
+        "assistConsole": "https://example.org",
+        "conversation": "https://example.org",
+        "cardDesigner": "https://example.org"
+      }
+    },
+    "dev": {
+      "restBaseUrl": "https://dev-api.example.org",
+      "apps": {
+        "admin": "https://dev-admin.example.org"
+      }
+    },
+    "qa": {
+      "restBaseUrl": "https://qa-api.example.org",
+      "apps": {
+        "admin": "https://qa-admin.example.org"
+      }
+    },
+    "stage": {
+      "restBaseUrl": "https://stage-api.example.org",
+      "apps": {
+        "admin": "https://stage-admin.example.org"
+      }
+    },
+    "prod-like": {
+      "restBaseUrl": "https://prodlike-api.example.org",
+      "apps": {
+        "admin": "https://prodlike-admin.example.org"
+      }
+    }
+  },
+  "users": {
+    "admin": {
+      "username": "${ADMIN_USERNAME}",
+      "password": "${ADMIN_PASSWORD}",
+      "apiKey": "${ADMIN_API_KEY}"
+    },
+    "openChannel": {
+      "apiKey": "${OPEN_CHANNEL_API_KEY}"
+    }
+  }
+}

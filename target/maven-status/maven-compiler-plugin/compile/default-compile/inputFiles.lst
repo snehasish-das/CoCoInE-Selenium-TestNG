@@ -1,0 +1,14 @@
+/Users/snehasish/Documents/ChatGPT/COCOINE/src/main/java/org/cocoine/framework/api/AuthSupport.java
+/Users/snehasish/Documents/ChatGPT/COCOINE/src/main/java/org/cocoine/framework/api/RestClient.java
+/Users/snehasish/Documents/ChatGPT/COCOINE/src/main/java/org/cocoine/framework/config/FrameworkConfig.java
+/Users/snehasish/Documents/ChatGPT/COCOINE/src/main/java/org/cocoine/framework/data/JsonDataProvider.java
+/Users/snehasish/Documents/ChatGPT/COCOINE/src/main/java/org/cocoine/framework/driver/DriverManager.java
+/Users/snehasish/Documents/ChatGPT/COCOINE/src/main/java/org/cocoine/framework/listener/FrameworkListener.java
+/Users/snehasish/Documents/ChatGPT/COCOINE/src/main/java/org/cocoine/framework/logging/FrameworkLogger.java
+/Users/snehasish/Documents/ChatGPT/COCOINE/src/main/java/org/cocoine/framework/pages/sample/SamplePage.java
+/Users/snehasish/Documents/ChatGPT/COCOINE/src/main/java/org/cocoine/framework/reporting/AllureAttachments.java
+/Users/snehasish/Documents/ChatGPT/COCOINE/src/main/java/org/cocoine/framework/ui/LocatorRepository.java
+/Users/snehasish/Documents/ChatGPT/COCOINE/src/main/java/org/cocoine/framework/ui/SeleniumActions.java
+/Users/snehasish/Documents/ChatGPT/COCOINE/src/main/java/org/cocoine/framework/util/JsonLoader.java
+/Users/snehasish/Documents/ChatGPT/COCOINE/src/main/java/org/cocoine/framework/util/JsonSchemaValidator.java
+/Users/snehasish/Documents/ChatGPT/COCOINE/src/main/java/org/cocoine/framework/util/RandomData.java

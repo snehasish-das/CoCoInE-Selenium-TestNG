@@ -1,0 +1,10 @@
+{
+  "records": [
+    {
+      "name": "httpbin-get",
+      "path": "/get",
+      "correlationId": "api-{{RANDOM_STRING}}",
+      "businessDate": "{{CURRDATE}}"
+    }
+  ]
+}
