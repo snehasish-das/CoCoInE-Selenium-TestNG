@@ -2,6 +2,7 @@ package org.cocoine.pages.ui.gorest;
 
 import java.util.Map;
 import org.cocoine.core.BaseClass;
+import org.cocoine.core.Config;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -45,6 +46,10 @@ public class HomePage extends BaseClass {
     return isVisible(By.xpath(locators.get("resourceText")));
   }
 
+  public boolean hasApiEndpointLink(String endpoint) {
+    return isVisible(xpath(locators.get("apiEndpoint"), endpoint));
+  }
+
   public void clickNavigation(String label) {
     clickFirstDisplayed(xpath(locators.get("navLink"), label));
   }
@@ -55,6 +60,10 @@ public class HomePage extends BaseClass {
 
   public void clickHref(String href) {
     clickFirstDisplayed(xpath(locators.get("href"), href));
+  }
+
+  public void openPath(String path) {
+    pageDriver.get(Config.applicationUrl("gorest") + path);
   }
 
   private void clickFirstDisplayed(By locator) {
