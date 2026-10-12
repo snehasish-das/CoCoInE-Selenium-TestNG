@@ -1,5 +1,9 @@
+org/cocoine/tests/ui/GoRestHomePageTest.class
+org/cocoine/tests/api/GoRestApiCrudTest.class
+org/cocoine/tests/ui/GoRestVisualAndEventTest.class
 org/cocoine/tests/ui/BaseUiTest.class
 org/cocoine/tests/ui/SampleUiTest.class
 org/cocoine/tests/api/FrameworkWiringTest.class
 org/cocoine/tests/contract/ContractPlaceholderTest.class
+org/cocoine/tests/api/GoRestApiReadTest.class
 org/cocoine/tests/api/SampleApiTest.class

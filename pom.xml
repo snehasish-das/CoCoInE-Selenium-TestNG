@@ -126,6 +126,7 @@
                     <systemPropertyVariables>
                         <allure.results.directory>${allure.results.directory}</allure.results.directory>
                         <threadCount>${threadCount}</threadCount>
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
@@ -182,6 +183,13 @@
             <properties>
                 <suiteXmlFile>src/test/resources/suites/ci-suite.xml</suiteXmlFile>
                 <threadCount>6</threadCount>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <suiteXmlFile>src/test/resources/suites/prod-suite.xml</suiteXmlFile>
+                <threadCount>2</threadCount>
             </properties>
         </profile>
         <profile>

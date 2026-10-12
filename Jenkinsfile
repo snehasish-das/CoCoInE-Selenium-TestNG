@@ -4,7 +4,7 @@ pipeline {
   parameters {
     choice(name: 'ENV', choices: ['local', 'dev', 'qa', 'stage', 'prod-like'], description: 'Target environment')
     choice(name: 'BROWSER', choices: ['chrome', 'firefox'], description: 'Browser for UI execution')
-    choice(name: 'SUITE', choices: ['ci', 'sanity', 'local'], description: 'Maven profile/suite to execute')
+    choice(name: 'SUITE', choices: ['ci', 'sanity', 'prod', 'local'], description: 'Maven profile/suite to execute')
     string(name: 'THREAD_COUNT', defaultValue: '4', description: 'Parallel thread count')
     string(name: 'AGENT_LABEL', defaultValue: 'aws-linux', description: 'Jenkins/AWS agent label')
     booleanParam(name: 'START_GRID', defaultValue: true, description: 'Start Docker Selenium Grid')

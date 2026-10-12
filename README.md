@@ -22,7 +22,10 @@ conventions, review gates, and machine-readable metadata.
 ```bash
 mvn test
 mvn test -Psanity
+mvn test -Pprod -Denv=prod-like
 mvn test -Dtest=SampleApiTest#getEndpointReturnsSuccess
+mvn test -Dtest=GoRestApiReadTest
+GOREST_TOKEN=your-token mvn test -Dtest=GoRestApiCrudTest
 ```
 
 ## Useful Parameters
@@ -34,6 +37,8 @@ mvn test \
   -DthreadCount=4 \
   -Dremote=false
 ```
+
+GoREST write tests require `GOREST_TOKEN`. Without it, the write-flow tests are skipped with a clear reason.
 
 For Grid:
 
@@ -57,11 +62,17 @@ Supported groups:
 - `sanity`
 - `smoke`
 - `regression`
+- `BAT`
+- `P1`
+- `P2`
 - `contract`
 - `component`
 - `integration`
 - `e2e`
 - `critical`
+
+Production-like runs should use the `prod` profile. The production suite includes read-only
+checks and policy-gated flows that stop before restricted steps.
 
 ## Project Layout
 

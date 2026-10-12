@@ -7,9 +7,10 @@
   },
   "environments": {
     "local": {
-      "restBaseUrl": "https://httpbin.org",
+      "restBaseUrl": "https://gorest.co.in/public/v2",
       "apps": {
-        "admin": "https://example.org",
+        "admin": "https://gorest.co.in/",
+        "gorest": "https://gorest.co.in/",
         "assistConsole": "https://example.org",
         "conversation": "https://example.org",
         "cardDesigner": "https://example.org"

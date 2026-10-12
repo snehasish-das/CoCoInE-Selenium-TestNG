@@ -3,9 +3,24 @@
     <listeners>
         <listener class-name="org.cocoine.framework.listener.FrameworkListener"/>
     </listeners>
-    <test name="all-tests">
+    <test name="gorest-ui">
         <packages>
-            <package name="org.cocoine.tests.*"/>
+            <package name="org.cocoine.tests.ui"/>
+        </packages>
+    </test>
+    <test name="gorest-api-read">
+        <classes>
+            <class name="org.cocoine.tests.api.GoRestApiReadTest"/>
+        </classes>
+    </test>
+    <test name="gorest-api-crud" preserve-order="true">
+        <classes>
+            <class name="org.cocoine.tests.api.GoRestApiCrudTest"/>
+        </classes>
+    </test>
+    <test name="contract">
+        <packages>
+            <package name="org.cocoine.tests.contract"/>
         </packages>
     </test>
 </suite>

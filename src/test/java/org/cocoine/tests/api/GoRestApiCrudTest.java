@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import org.cocoine.framework.api.AuthSupport;
 import org.cocoine.framework.api.RestClient;
+import org.cocoine.framework.execution.PolicyGatedFlow;
 import org.cocoine.framework.util.RandomData;
 import org.testng.Assert;
 import org.testng.SkipException;
@@ -36,8 +37,23 @@ public class GoRestApiCrudTest {
 
   @Feature("GoREST API")
   @Story("User CRUD")
-  @Test(groups = {"regression", "P1"}, description = "TC_02 - Create User")
-  public void createUser() {
+  @Test(groups = {"regression", "P1"}, description = "TC_02 through TC_11 - Policy-gated API CRUD flow")
+  public void gorestApiCrudPolicyGatedFlow() {
+    PolicyGatedFlow.flow("gorest-api-crud")
+        .step(1, "Create user", this::createUserStep)
+        .step(2, "Replace user", this::replaceUserStep)
+        .step(3, "Create post for user", this::createPostForUserStep)
+        .step(4, "Get user posts", this::getUserPostsStep)
+        .step(5, "Get single post", this::getSinglePostStep)
+        .step(6, "Update post", this::updatePostStep)
+        .step(7, "Create post comment", this::createPostCommentStep)
+        .step(8, "Create todo", this::createTodoStep)
+        .step(9, "Delete post", this::deletePostStep)
+        .step(10, "Delete user", this::deleteUserStep)
+        .run();
+  }
+
+  private void createUserStep() {
     Response response = client.authenticatedPost("/users", Map.of(
         "name", "Snehasish Das",
         "email", createdEmail,
@@ -55,8 +71,7 @@ public class GoRestApiCrudTest {
 
   @Feature("GoREST API")
   @Story("User CRUD")
-  @Test(groups = {"regression", "P1"}, dependsOnMethods = "createUser", description = "TC_03 - Replace User")
-  public void replaceUser() {
+  private void replaceUserStep() {
     Response response = client.authenticatedPut("/users/" + userId, Map.of(
         "name", "Someone Like You",
         "email", replacedEmail,
@@ -73,8 +88,7 @@ public class GoRestApiCrudTest {
 
   @Feature("GoREST API")
   @Story("Posts")
-  @Test(groups = {"regression", "P1"}, dependsOnMethods = "replaceUser", description = "TC_04 - Create Post For User")
-  public void createPostForUser() {
+  private void createPostForUserStep() {
     Response response = client.authenticatedPost("/users/" + userId + "/posts", Map.of(
         "title", "Nihil accendo turba voluptatem totidem virtus vilis ut mollitia.",
         "body", "Alter non sumptus. Adicio tabula altus. Comedo suggero degero. Armarium cicuta corporis."),
@@ -92,8 +106,7 @@ public class GoRestApiCrudTest {
 
   @Feature("GoREST API")
   @Story("Posts")
-  @Test(groups = {"regression", "P1"}, dependsOnMethods = "createPostForUser", description = "TC_05 - Get User Posts")
-  public void getUserPosts() {
+  private void getUserPostsStep() {
     Response response = client.authenticatedGet("/users/" + userId + "/posts", token);
 
     Assert.assertEquals(response.statusCode(), 200, "Get user posts status code should be 200.");
@@ -109,8 +122,7 @@ public class GoRestApiCrudTest {
 
   @Feature("GoREST API")
   @Story("Posts")
-  @Test(groups = {"regression", "P1"}, dependsOnMethods = "getUserPosts", description = "TC_06 - Get Single Post")
-  public void getSinglePost() {
+  private void getSinglePostStep() {
     Response response = client.authenticatedGet("/posts/" + postId, token);
 
     Assert.assertEquals(response.statusCode(), 200, "Get single post status code should be 200.");
@@ -122,8 +134,7 @@ public class GoRestApiCrudTest {
 
   @Feature("GoREST API")
   @Story("Posts")
-  @Test(groups = {"regression", "P1"}, dependsOnMethods = "getSinglePost", description = "TC_07 - Update Post")
-  public void updatePost() {
+  private void updatePostStep() {
     Response response = client.authenticatedPatch("/posts/" + postId, Map.of("title", "Updated Post Title"), token);
 
     Assert.assertEquals(response.statusCode(), 200, "Update post status code should be 200.");
@@ -135,8 +146,7 @@ public class GoRestApiCrudTest {
 
   @Feature("GoREST API")
   @Story("Comments")
-  @Test(groups = {"regression", "P1"}, dependsOnMethods = "updatePost", description = "TC_08 - Create Post Comment")
-  public void createPostComment() {
+  private void createPostCommentStep() {
     Response response = client.authenticatedPost("/posts/" + postId + "/comments", Map.of(
         "name", "Bhagvan Chaturvedi",
         "email", "chaturvedi.bhagvan." + RandomData.alphaNumeric(8).toLowerCase() + "@example.test",
@@ -153,8 +163,7 @@ public class GoRestApiCrudTest {
 
   @Feature("GoREST API")
   @Story("Todos")
-  @Test(groups = {"regression", "P1"}, dependsOnMethods = "createPostComment", description = "TC_09 - Create Todo")
-  public void createTodo() {
+  private void createTodoStep() {
     String dueOn = OffsetDateTime.now().plusDays(7).withNano(0).toString();
     Response response = client.authenticatedPost("/users/" + userId + "/todos", Map.of(
         "title", "Tantum approbo communis doloribus avaritia.",
@@ -171,8 +180,7 @@ public class GoRestApiCrudTest {
 
   @Feature("GoREST API")
   @Story("Posts")
-  @Test(groups = {"regression", "P1"}, dependsOnMethods = "createTodo", description = "TC_10 - Delete Post")
-  public void deletePost() {
+  private void deletePostStep() {
     Response response = client.authenticatedDelete("/posts/" + postId, token);
 
     Assert.assertEquals(response.statusCode(), 204, "Delete post status code should be 204.");
@@ -182,8 +190,7 @@ public class GoRestApiCrudTest {
 
   @Feature("GoREST API")
   @Story("User CRUD")
-  @Test(groups = {"regression", "P1"}, dependsOnMethods = "deletePost", description = "TC_11 - Delete User")
-  public void deleteUser() {
+  private void deleteUserStep() {
     Response response = client.authenticatedDelete("/users/" + userId, token);
 
     Assert.assertEquals(response.statusCode(), 204, "Delete user status code should be 204.");

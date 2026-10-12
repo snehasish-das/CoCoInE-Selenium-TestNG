@@ -2,6 +2,7 @@ package org.cocoine.framework.listener;
 
 import io.qameta.allure.Allure;
 import org.cocoine.framework.driver.DriverManager;
+import org.cocoine.framework.execution.TestExecutionPolicy;
 import org.cocoine.framework.reporting.AllureAttachments;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
@@ -9,6 +10,11 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 public class FrameworkListener implements ITestListener {
+  @Override
+  public void onStart(ITestContext context) {
+    TestExecutionPolicy.requireProdApprovedSuite();
+  }
+
   @Override
   public void onTestStart(ITestResult result) {
     Allure.label("owner", System.getProperty("owner", "qa-automation"));

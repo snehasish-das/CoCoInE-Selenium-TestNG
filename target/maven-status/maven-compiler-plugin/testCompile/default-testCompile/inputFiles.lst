@@ -1,5 +1,9 @@
-/Users/snehasish/Documents/ChatGPT/COCOINE/src/test/java/org/cocoine/tests/api/FrameworkWiringTest.java
-/Users/snehasish/Documents/ChatGPT/COCOINE/src/test/java/org/cocoine/tests/api/SampleApiTest.java
-/Users/snehasish/Documents/ChatGPT/COCOINE/src/test/java/org/cocoine/tests/contract/ContractPlaceholderTest.java
-/Users/snehasish/Documents/ChatGPT/COCOINE/src/test/java/org/cocoine/tests/ui/BaseUiTest.java
-/Users/snehasish/Documents/ChatGPT/COCOINE/src/test/java/org/cocoine/tests/ui/SampleUiTest.java
+/Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/test/java/org/cocoine/tests/api/FrameworkWiringTest.java
+/Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/test/java/org/cocoine/tests/api/GoRestApiCrudTest.java
+/Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/test/java/org/cocoine/tests/api/GoRestApiReadTest.java
+/Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/test/java/org/cocoine/tests/api/SampleApiTest.java
+/Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/test/java/org/cocoine/tests/contract/ContractPlaceholderTest.java
+/Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/test/java/org/cocoine/tests/ui/BaseUiTest.java
+/Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/test/java/org/cocoine/tests/ui/GoRestHomePageTest.java
+/Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/test/java/org/cocoine/tests/ui/GoRestVisualAndEventTest.java
+/Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/test/java/org/cocoine/tests/ui/SampleUiTest.java

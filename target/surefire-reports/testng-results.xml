@@ -1,32 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-10-12T06:47:01 IST" name="cocoine-framework-suite" finished-at="2026-10-12T06:47:02 IST" duration-ms="110">
+  <suite started-at="2026-10-12T07:25:34 IST" name="ci-suite" finished-at="2026-10-12T07:25:34 IST" duration-ms="0">
     <groups>
+      <group name="P1">
+        <method signature="GoRestApiReadTest.getUsersListReturnsUserArray()[pri:0, instance:org.cocoine.tests.api.GoRestApiReadTest@5d58c727]" name="getUsersListReturnsUserArray" class="org.cocoine.tests.api.GoRestApiReadTest"/>
+        <method signature="GoRestApiCrudTest.gorestApiCrudPolicyGatedFlow()[pri:0, instance:org.cocoine.tests.api.GoRestApiCrudTest@3241713e]" name="gorestApiCrudPolicyGatedFlow" class="org.cocoine.tests.api.GoRestApiCrudTest"/>
+        <method signature="GoRestHomePageTest.homepageNavigationAndToolsSectionValidation()[pri:0, instance:org.cocoine.tests.ui.GoRestHomePageTest@6edaa77a]" name="homepageNavigationAndToolsSectionValidation" class="org.cocoine.tests.ui.GoRestHomePageTest"/>
+        <method signature="GoRestHomePageTest.signInNavigationAndLoginPageVisibilityValidation()[pri:0, instance:org.cocoine.tests.ui.GoRestHomePageTest@6edaa77a]" name="signInNavigationAndLoginPageVisibilityValidation" class="org.cocoine.tests.ui.GoRestHomePageTest"/>
+        <method signature="GoRestHomePageTest.uiComponentValidationForNavigationButtonsAndContentSections()[pri:0, instance:org.cocoine.tests.ui.GoRestHomePageTest@6edaa77a]" name="uiComponentValidationForNavigationButtonsAndContentSections" class="org.cocoine.tests.ui.GoRestHomePageTest"/>
+      </group> <!-- P1 -->
+      <group name="P2">
+        <method signature="GoRestHomePageTest.assertionFocusedValidationUsingSeleniumAndTestNgAssertions()[pri:0, instance:org.cocoine.tests.ui.GoRestHomePageTest@6edaa77a]" name="assertionFocusedValidationUsingSeleniumAndTestNgAssertions" class="org.cocoine.tests.ui.GoRestHomePageTest"/>
+        <method signature="GoRestHomePageTest.locatorStrategyValidationUsingTestIdConceptAndFallbackLocators()[pri:0, instance:org.cocoine.tests.ui.GoRestHomePageTest@6edaa77a]" name="locatorStrategyValidationUsingTestIdConceptAndFallbackLocators" class="org.cocoine.tests.ui.GoRestHomePageTest"/>
+        <method signature="GoRestVisualAndEventTest.darkModeVisualRegressionValidation()[pri:0, instance:org.cocoine.tests.ui.GoRestVisualAndEventTest@aced190]" name="darkModeVisualRegressionValidation" class="org.cocoine.tests.ui.GoRestVisualAndEventTest"/>
+        <method signature="GoRestVisualAndEventTest.dialogsPopupsFramesOrBrowserEventListenerValidation()[pri:0, instance:org.cocoine.tests.ui.GoRestVisualAndEventTest@aced190]" name="dialogsPopupsFramesOrBrowserEventListenerValidation" class="org.cocoine.tests.ui.GoRestVisualAndEventTest"/>
+        <method signature="GoRestVisualAndEventTest.traceAndInspectorReadyUserJourneyValidation()[pri:0, instance:org.cocoine.tests.ui.GoRestVisualAndEventTest@aced190]" name="traceAndInspectorReadyUserJourneyValidation" class="org.cocoine.tests.ui.GoRestVisualAndEventTest"/>
+      </group> <!-- P2 -->
+      <group name="BAT">
+        <method signature="GoRestApiReadTest.getUsersListReturnsUserArray()[pri:0, instance:org.cocoine.tests.api.GoRestApiReadTest@5d58c727]" name="getUsersListReturnsUserArray" class="org.cocoine.tests.api.GoRestApiReadTest"/>
+        <method signature="GoRestHomePageTest.homepageNavigationAndToolsSectionValidation()[pri:0, instance:org.cocoine.tests.ui.GoRestHomePageTest@6edaa77a]" name="homepageNavigationAndToolsSectionValidation" class="org.cocoine.tests.ui.GoRestHomePageTest"/>
+        <method signature="GoRestHomePageTest.signInNavigationAndLoginPageVisibilityValidation()[pri:0, instance:org.cocoine.tests.ui.GoRestHomePageTest@6edaa77a]" name="signInNavigationAndLoginPageVisibilityValidation" class="org.cocoine.tests.ui.GoRestHomePageTest"/>
+      </group> <!-- BAT -->
+      <group name="regression">
+        <method signature="GoRestApiReadTest.getUsersListReturnsUserArray()[pri:0, instance:org.cocoine.tests.api.GoRestApiReadTest@5d58c727]" name="getUsersListReturnsUserArray" class="org.cocoine.tests.api.GoRestApiReadTest"/>
+        <method signature="GoRestApiCrudTest.gorestApiCrudPolicyGatedFlow()[pri:0, instance:org.cocoine.tests.api.GoRestApiCrudTest@3241713e]" name="gorestApiCrudPolicyGatedFlow" class="org.cocoine.tests.api.GoRestApiCrudTest"/>
+        <method signature="GoRestHomePageTest.assertionFocusedValidationUsingSeleniumAndTestNgAssertions()[pri:0, instance:org.cocoine.tests.ui.GoRestHomePageTest@6edaa77a]" name="assertionFocusedValidationUsingSeleniumAndTestNgAssertions" class="org.cocoine.tests.ui.GoRestHomePageTest"/>
+        <method signature="GoRestHomePageTest.homepageNavigationAndToolsSectionValidation()[pri:0, instance:org.cocoine.tests.ui.GoRestHomePageTest@6edaa77a]" name="homepageNavigationAndToolsSectionValidation" class="org.cocoine.tests.ui.GoRestHomePageTest"/>
+        <method signature="GoRestHomePageTest.locatorStrategyValidationUsingTestIdConceptAndFallbackLocators()[pri:0, instance:org.cocoine.tests.ui.GoRestHomePageTest@6edaa77a]" name="locatorStrategyValidationUsingTestIdConceptAndFallbackLocators" class="org.cocoine.tests.ui.GoRestHomePageTest"/>
+        <method signature="GoRestHomePageTest.signInNavigationAndLoginPageVisibilityValidation()[pri:0, instance:org.cocoine.tests.ui.GoRestHomePageTest@6edaa77a]" name="signInNavigationAndLoginPageVisibilityValidation" class="org.cocoine.tests.ui.GoRestHomePageTest"/>
+        <method signature="GoRestHomePageTest.uiComponentValidationForNavigationButtonsAndContentSections()[pri:0, instance:org.cocoine.tests.ui.GoRestHomePageTest@6edaa77a]" name="uiComponentValidationForNavigationButtonsAndContentSections" class="org.cocoine.tests.ui.GoRestHomePageTest"/>
+        <method signature="GoRestVisualAndEventTest.darkModeVisualRegressionValidation()[pri:0, instance:org.cocoine.tests.ui.GoRestVisualAndEventTest@aced190]" name="darkModeVisualRegressionValidation" class="org.cocoine.tests.ui.GoRestVisualAndEventTest"/>
+        <method signature="GoRestVisualAndEventTest.dialogsPopupsFramesOrBrowserEventListenerValidation()[pri:0, instance:org.cocoine.tests.ui.GoRestVisualAndEventTest@aced190]" name="dialogsPopupsFramesOrBrowserEventListenerValidation" class="org.cocoine.tests.ui.GoRestVisualAndEventTest"/>
+        <method signature="GoRestVisualAndEventTest.traceAndInspectorReadyUserJourneyValidation()[pri:0, instance:org.cocoine.tests.ui.GoRestVisualAndEventTest@aced190]" name="traceAndInspectorReadyUserJourneyValidation" class="org.cocoine.tests.ui.GoRestVisualAndEventTest"/>
+      </group> <!-- regression -->
       <group name="contract">
-        <method signature="ContractPlaceholderTest.contractSuiteIsWired()[pri:0, instance:org.cocoine.tests.contract.ContractPlaceholderTest@6caf0677]" name="contractSuiteIsWired" class="org.cocoine.tests.contract.ContractPlaceholderTest"/>
+        <method signature="ContractPlaceholderTest.contractSuiteIsWired()[pri:0, instance:org.cocoine.tests.contract.ContractPlaceholderTest@563f38c4]" name="contractSuiteIsWired" class="org.cocoine.tests.contract.ContractPlaceholderTest"/>
       </group> <!-- contract -->
       <group name="smoke">
-        <method signature="FrameworkWiringTest.frameworkResourcesLoad()[pri:0, instance:org.cocoine.tests.api.FrameworkWiringTest@413d1baf]" name="frameworkResourcesLoad" class="org.cocoine.tests.api.FrameworkWiringTest"/>
+        <method signature="GoRestApiReadTest.getUsersListReturnsUserArray()[pri:0, instance:org.cocoine.tests.api.GoRestApiReadTest@5d58c727]" name="getUsersListReturnsUserArray" class="org.cocoine.tests.api.GoRestApiReadTest"/>
+        <method signature="GoRestHomePageTest.homepageNavigationAndToolsSectionValidation()[pri:0, instance:org.cocoine.tests.ui.GoRestHomePageTest@6edaa77a]" name="homepageNavigationAndToolsSectionValidation" class="org.cocoine.tests.ui.GoRestHomePageTest"/>
+        <method signature="GoRestHomePageTest.signInNavigationAndLoginPageVisibilityValidation()[pri:0, instance:org.cocoine.tests.ui.GoRestHomePageTest@6edaa77a]" name="signInNavigationAndLoginPageVisibilityValidation" class="org.cocoine.tests.ui.GoRestHomePageTest"/>
       </group> <!-- smoke -->
-      <group name="sanity">
-        <method signature="FrameworkWiringTest.frameworkResourcesLoad()[pri:0, instance:org.cocoine.tests.api.FrameworkWiringTest@413d1baf]" name="frameworkResourcesLoad" class="org.cocoine.tests.api.FrameworkWiringTest"/>
-      </group> <!-- sanity -->
     </groups>
-    <test started-at="2026-10-12T06:47:01 IST" name="all-tests" finished-at="2026-10-12T06:47:02 IST" duration-ms="110">
-      <class name="org.cocoine.tests.contract.ContractPlaceholderTest">
-        <test-method signature="contractSuiteIsWired()[pri:0, instance:org.cocoine.tests.contract.ContractPlaceholderTest@6caf0677]" started-at="2026-10-12T06:47:02 IST" name="contractSuiteIsWired" description="Placeholder proving contract suite wiring" finished-at="2026-10-12T06:47:02 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- contractSuiteIsWired -->
-      </class> <!-- org.cocoine.tests.contract.ContractPlaceholderTest -->
-      <class name="org.cocoine.tests.api.FrameworkWiringTest">
-        <test-method signature="frameworkResourcesLoad()[pri:0, instance:org.cocoine.tests.api.FrameworkWiringTest@413d1baf]" started-at="2026-10-12T06:47:02 IST" name="frameworkResourcesLoad" description="Verifies config and locator resources are loadable" finished-at="2026-10-12T06:47:02 IST" duration-ms="56" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- frameworkResourcesLoad -->
-      </class> <!-- org.cocoine.tests.api.FrameworkWiringTest -->
-    </test> <!-- all-tests -->
-  </suite> <!-- cocoine-framework-suite -->
+  </suite> <!-- ci-suite -->
 </testng-results>
