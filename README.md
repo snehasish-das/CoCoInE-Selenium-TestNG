@@ -35,6 +35,17 @@ mvn test -Dtest=SampleApiTest
 mvn test -Dtest=SampleUiTest#homePageLoads
 ```
 
+To check which TestNG methods would participate without executing tests:
+
+```bash
+mvn test -DdryRun=true
+mvn test -Psanity -DdryRun=true
+mvn test -DdryRun=true -Dtest=GetUsersListTest#getUsersList
+```
+
+The dry run prints the selected TestNG methods, compiles the participating test sources, and writes
+the same result to `target/dry-run-report.txt`.
+
 ## Common Parameters
 
 ```bash

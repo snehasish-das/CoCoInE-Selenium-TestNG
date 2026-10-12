@@ -74,6 +74,11 @@
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.5.0</version>
+            </plugin>
         </plugins>
     </build>
 
@@ -90,6 +95,79 @@
                 <remote>true</remote>
                 <gridUrl>http://localhost:4444/wd/hub</gridUrl>
             </properties>
+        </profile>
+        <profile>
+            <id>dry-run</id>
+            <activation>
+                <property>
+                    <name>dryRun</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <properties>
+                <skipTests>true</skipTests>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <version>3.8.1</version>
+                        <executions>
+                            <execution>
+                                <id>build-dry-run-classpath</id>
+                                <phase>generate-test-sources</phase>
+                                <goals>
+                                    <goal>build-classpath</goal>
+                                </goals>
+                                <configuration>
+                                    <includeScope>test</includeScope>
+                                    <outputFile>${project.build.directory}/dry-run-classpath.txt</outputFile>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>dry-run-report</id>
+                                <phase>process-test-sources</phase>
+                                <goals>
+                                    <goal>java</goal>
+                                </goals>
+                                <configuration>
+                                    <mainClass>org.cocoine.core.dryrun.DryRunReporter</mainClass>
+                                    <classpathScope>test</classpathScope>
+                                    <systemProperties>
+                                        <systemProperty>
+                                            <key>suiteXmlFile</key>
+                                            <value>${suiteXmlFile}</value>
+                                        </systemProperty>
+                                        <systemProperty>
+                                            <key>maven.compiler.release</key>
+                                            <value>${maven.compiler.release}</value>
+                                        </systemProperty>
+                                        <systemProperty>
+                                            <key>groups</key>
+                                            <value>${groups}</value>
+                                        </systemProperty>
+                                        <systemProperty>
+                                            <key>excludedGroups</key>
+                                            <value>${excludedGroups}</value>
+                                        </systemProperty>
+                                        <systemProperty>
+                                            <key>test</key>
+                                            <value>${test}</value>
+                                        </systemProperty>
+                                    </systemProperties>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
     </profiles>
 </project>

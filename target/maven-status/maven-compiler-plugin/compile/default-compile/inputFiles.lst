@@ -3,6 +3,7 @@
 /Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/main/java/org/cocoine/core/ResourceHelper.java
 /Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/main/java/org/cocoine/core/RestBaseClass.java
 /Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/main/java/org/cocoine/core/TestListener.java
+/Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/main/java/org/cocoine/core/dryrun/DryRunReporter.java
 /Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/main/java/org/cocoine/pages/rest/SampleApi.java
 /Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/main/java/org/cocoine/pages/rest/gorest/ApiClient.java
 /Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/main/java/org/cocoine/pages/ui/SamplePage.java
