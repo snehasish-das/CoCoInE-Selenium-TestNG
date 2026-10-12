@@ -5,11 +5,17 @@ import org.cocoine.framework.driver.DriverManager;
 import org.cocoine.framework.execution.TestExecutionPolicy;
 import org.cocoine.framework.reporting.AllureAttachments;
 import org.openqa.selenium.WebDriver;
+import org.testng.IExecutionListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class FrameworkListener implements ITestListener {
+public class FrameworkListener implements ITestListener, IExecutionListener {
+  @Override
+  public void onExecutionStart() {
+    TestExecutionPolicy.requireProdApprovedSuite();
+  }
+
   @Override
   public void onStart(ITestContext context) {
     TestExecutionPolicy.requireProdApprovedSuite();
