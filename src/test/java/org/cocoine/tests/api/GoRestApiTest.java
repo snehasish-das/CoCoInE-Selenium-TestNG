@@ -3,12 +3,12 @@ package org.cocoine.tests.api;
 import io.restassured.response.Response;
 import java.util.List;
 import java.util.Map;
-import org.cocoine.pages.rest.gorest.GoRestApi;
+import org.cocoine.pages.rest.gorest.ApiClient;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class GoRestApiTest {
-  private final GoRestApi api = new GoRestApi();
+  private final ApiClient api = new ApiClient();
 
   @Test(groups = {"smoke", "api"}, description = "API TC_01 - Get users list")
   public void getUsersList() {

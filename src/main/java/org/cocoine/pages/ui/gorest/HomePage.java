@@ -4,18 +4,19 @@ import java.util.Map;
 import org.cocoine.core.BaseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
-public class GoRestHomePage extends BaseClass {
+public class HomePage extends BaseClass {
   private final WebDriver pageDriver;
   private final Map<String, String> locators;
 
-  public GoRestHomePage(WebDriver driver) {
+  public HomePage(WebDriver driver) {
     this.pageDriver = driver;
     this.driver = driver;
     this.locators = getLocators("locators/gorest/HomePage.json");
   }
 
-  public GoRestHomePage open(String url) {
+  public HomePage open(String url) {
     pageDriver.get(url);
     return this;
   }
@@ -45,10 +46,24 @@ public class GoRestHomePage extends BaseClass {
   }
 
   public void clickNavigation(String label) {
-    click(xpath(locators.get("navLink"), label));
+    clickFirstDisplayed(xpath(locators.get("navLink"), label));
   }
 
   public void clickAction(String value) {
     click(xpath(locators.get("actionLink"), value));
+  }
+
+  public void clickHref(String href) {
+    clickFirstDisplayed(xpath(locators.get("href"), href));
+  }
+
+  private void clickFirstDisplayed(By locator) {
+    for (WebElement element : pageDriver.findElements(locator)) {
+      if (element.isDisplayed() && element.isEnabled()) {
+        element.click();
+        return;
+      }
+    }
+    click(locator);
   }
 }

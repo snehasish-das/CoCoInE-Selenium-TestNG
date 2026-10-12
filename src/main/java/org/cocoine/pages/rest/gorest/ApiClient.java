@@ -4,8 +4,8 @@ import io.restassured.response.Response;
 import org.cocoine.core.Config;
 import org.cocoine.core.RestBaseClass;
 
-public class GoRestApi extends RestBaseClass {
-  public GoRestApi() {
+public class ApiClient extends RestBaseClass {
+  public ApiClient() {
     super(Config.value("Apis.gorest"));
   }
 

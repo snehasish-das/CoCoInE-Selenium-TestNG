@@ -2,6 +2,7 @@
   "brand": "//*[contains(normalize-space(), 'Go REST') or contains(normalize-space(), 'GoRest') or contains(normalize-space(), 'GOREST')]",
   "navigation": "//nav | //header",
   "navLink": "//a[contains(normalize-space(), '<<param>>')]",
+  "href": "//a[@href='<<param>>']",
   "bodyText": "//*[contains(normalize-space(), '<<param>>')]",
   "resourceText": "//*[contains(normalize-space(), 'Users') or contains(normalize-space(), 'Posts') or contains(normalize-space(), 'Comments') or contains(normalize-space(), 'Todos')]",
   "actionLink": "//a[contains(normalize-space(), '<<param>>') or contains(@href, '<<param>>')]"

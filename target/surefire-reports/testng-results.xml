@@ -1,43 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-10-12T08:28:05 IST" name="Surefire suite" finished-at="2026-10-12T08:28:09 IST" duration-ms="3625">
+  <suite started-at="2026-10-12T08:31:22 IST" name="cocoine-suite" finished-at="2026-10-12T08:34:14 IST" duration-ms="171415">
     <groups>
+      <group name="ui">
+        <method signature="GoRestUiTest.apiResourceContentIsVisible()[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" name="apiResourceContentIsVisible" class="org.cocoine.tests.ui.GoRestUiTest"/>
+        <method signature="GoRestUiTest.docsNavigationOpensDocumentation()[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" name="docsNavigationOpensDocumentation" class="org.cocoine.tests.ui.GoRestUiTest"/>
+        <method signature="GoRestUiTest.homePageLoads()[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" name="homePageLoads" class="org.cocoine.tests.ui.GoRestUiTest"/>
+        <method signature="GoRestUiTest.navigationIsVisible()[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" name="navigationIsVisible" class="org.cocoine.tests.ui.GoRestUiTest"/>
+        <method signature="GoRestUiTest.signInNavigationOpensAuthenticationPage()[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" name="signInNavigationOpensAuthenticationPage" class="org.cocoine.tests.ui.GoRestUiTest"/>
+        <method signature="SampleUiTest.homePageLoads()[pri:0, instance:org.cocoine.tests.ui.SampleUiTest@130c12b7]" name="homePageLoads" class="org.cocoine.tests.ui.SampleUiTest"/>
+      </group> <!-- ui -->
       <group name="smoke">
-        <method signature="GoRestApiTest.getUsersList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" name="getUsersList" class="org.cocoine.tests.api.GoRestApiTest"/>
+        <method signature="GoRestApiTest.getUsersList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@fba92d3]" name="getUsersList" class="org.cocoine.tests.api.GoRestApiTest"/>
+        <method signature="SampleApiTest.getEndpointReturnsSuccess(com.fasterxml.jackson.databind.JsonNode)[pri:0, instance:org.cocoine.tests.api.SampleApiTest@ec756bd]" name="getEndpointReturnsSuccess" class="org.cocoine.tests.api.SampleApiTest"/>
+        <method signature="GoRestUiTest.homePageLoads()[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" name="homePageLoads" class="org.cocoine.tests.ui.GoRestUiTest"/>
+        <method signature="SampleUiTest.homePageLoads()[pri:0, instance:org.cocoine.tests.ui.SampleUiTest@130c12b7]" name="homePageLoads" class="org.cocoine.tests.ui.SampleUiTest"/>
       </group> <!-- smoke -->
       <group name="api">
-        <method signature="GoRestApiTest.getCommentsList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" name="getCommentsList" class="org.cocoine.tests.api.GoRestApiTest"/>
-        <method signature="GoRestApiTest.getPostsList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" name="getPostsList" class="org.cocoine.tests.api.GoRestApiTest"/>
-        <method signature="GoRestApiTest.getSingleUserFromList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" name="getSingleUserFromList" class="org.cocoine.tests.api.GoRestApiTest"/>
-        <method signature="GoRestApiTest.getTodosList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" name="getTodosList" class="org.cocoine.tests.api.GoRestApiTest"/>
-        <method signature="GoRestApiTest.getUsersList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" name="getUsersList" class="org.cocoine.tests.api.GoRestApiTest"/>
+        <method signature="GoRestApiTest.getCommentsList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@fba92d3]" name="getCommentsList" class="org.cocoine.tests.api.GoRestApiTest"/>
+        <method signature="GoRestApiTest.getPostsList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@fba92d3]" name="getPostsList" class="org.cocoine.tests.api.GoRestApiTest"/>
+        <method signature="GoRestApiTest.getSingleUserFromList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@fba92d3]" name="getSingleUserFromList" class="org.cocoine.tests.api.GoRestApiTest"/>
+        <method signature="GoRestApiTest.getTodosList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@fba92d3]" name="getTodosList" class="org.cocoine.tests.api.GoRestApiTest"/>
+        <method signature="GoRestApiTest.getUsersList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@fba92d3]" name="getUsersList" class="org.cocoine.tests.api.GoRestApiTest"/>
+        <method signature="SampleApiTest.getEndpointReturnsSuccess(com.fasterxml.jackson.databind.JsonNode)[pri:0, instance:org.cocoine.tests.api.SampleApiTest@ec756bd]" name="getEndpointReturnsSuccess" class="org.cocoine.tests.api.SampleApiTest"/>
       </group> <!-- api -->
     </groups>
-    <test started-at="2026-10-12T08:28:05 IST" name="Surefire test" finished-at="2026-10-12T08:28:09 IST" duration-ms="3625">
+    <test started-at="2026-10-12T08:31:22 IST" name="api-tests" finished-at="2026-10-12T08:31:30 IST" duration-ms="7131">
       <class name="org.cocoine.tests.api.GoRestApiTest">
-        <test-method signature="getCommentsList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" started-at="2026-10-12T08:28:05 IST" name="getCommentsList" description="API TC_04 - Get comments list" finished-at="2026-10-12T08:28:06 IST" duration-ms="1309" status="PASS">
+        <test-method signature="getCommentsList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@fba92d3]" started-at="2026-10-12T08:31:24 IST" name="getCommentsList" description="API TC_04 - Get comments list" finished-at="2026-10-12T08:31:25 IST" duration-ms="763" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getCommentsList -->
-        <test-method signature="getPostsList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" started-at="2026-10-12T08:28:06 IST" name="getPostsList" description="API TC_03 - Get posts list" finished-at="2026-10-12T08:28:07 IST" duration-ms="459" status="PASS">
+        <test-method signature="getPostsList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@fba92d3]" started-at="2026-10-12T08:31:25 IST" name="getPostsList" description="API TC_03 - Get posts list" finished-at="2026-10-12T08:31:27 IST" duration-ms="1785" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPostsList -->
-        <test-method signature="getSingleUserFromList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" started-at="2026-10-12T08:28:07 IST" name="getSingleUserFromList" description="API TC_02 - Get a single user from list" finished-at="2026-10-12T08:28:08 IST" duration-ms="1128" status="PASS">
+        <test-method signature="getSingleUserFromList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@fba92d3]" started-at="2026-10-12T08:31:27 IST" name="getSingleUserFromList" description="API TC_02 - Get a single user from list" finished-at="2026-10-12T08:31:29 IST" duration-ms="1626" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getSingleUserFromList -->
-        <test-method signature="getTodosList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" started-at="2026-10-12T08:28:08 IST" name="getTodosList" description="API TC_05 - Get todos list" finished-at="2026-10-12T08:28:08 IST" duration-ms="294" status="PASS">
+        <test-method signature="getTodosList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@fba92d3]" started-at="2026-10-12T08:31:29 IST" name="getTodosList" description="API TC_05 - Get todos list" finished-at="2026-10-12T08:31:29 IST" duration-ms="430" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTodosList -->
-        <test-method signature="getUsersList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@37f1104d]" started-at="2026-10-12T08:28:08 IST" name="getUsersList" description="API TC_01 - Get users list" finished-at="2026-10-12T08:28:09 IST" duration-ms="420" status="PASS">
+        <test-method signature="getUsersList()[pri:0, instance:org.cocoine.tests.api.GoRestApiTest@fba92d3]" started-at="2026-10-12T08:31:29 IST" name="getUsersList" description="API TC_01 - Get users list" finished-at="2026-10-12T08:31:30 IST" duration-ms="470" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUsersList -->
       </class> <!-- org.cocoine.tests.api.GoRestApiTest -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+      <class name="org.cocoine.tests.api.SampleApiTest">
+        <test-method signature="getEndpointReturnsSuccess(com.fasterxml.jackson.databind.JsonNode)[pri:0, instance:org.cocoine.tests.api.SampleApiTest@ec756bd]" started-at="2026-10-12T08:31:22 IST" name="getEndpointReturnsSuccess" description="Sample API test using the generic REST wrapper" data-provider="sampleApiData" finished-at="2026-10-12T08:31:24 IST" duration-ms="2034" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"name":"httpbin-get","path":"/get","correlationId":"api-{{RANDOM_STRING}}","businessDate":"{{CURRDATE}}"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getEndpointReturnsSuccess -->
+      </class> <!-- org.cocoine.tests.api.SampleApiTest -->
+    </test> <!-- api-tests -->
+    <test started-at="2026-10-12T08:34:02 IST" name="ui-tests" finished-at="2026-10-12T08:34:14 IST" duration-ms="12263">
+      <class name="org.cocoine.tests.ui.GoRestUiTest">
+        <test-method is-config="true" signature="startBrowser(org.testng.ITestContext)[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" started-at="2026-10-12T08:34:03 IST" name="startBrowser" finished-at="2026-10-12T08:34:03 IST" duration-ms="573" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@13908f9c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="apiResourceContentIsVisible()[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" started-at="2026-10-12T08:34:03 IST" name="apiResourceContentIsVisible" description="UI TC_03 - API resource content is visible" finished-at="2026-10-12T08:34:05 IST" duration-ms="1666" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- apiResourceContentIsVisible -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" started-at="2026-10-12T08:34:05 IST" name="closeBrowser" finished-at="2026-10-12T08:34:05 IST" duration-ms="87" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser(org.testng.ITestContext)[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" started-at="2026-10-12T08:34:05 IST" name="startBrowser" finished-at="2026-10-12T08:34:06 IST" duration-ms="572" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@13908f9c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="docsNavigationOpensDocumentation()[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" started-at="2026-10-12T08:34:06 IST" name="docsNavigationOpensDocumentation" description="UI TC_04 - Docs navigation opens documentation" finished-at="2026-10-12T08:34:08 IST" duration-ms="1807" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- docsNavigationOpensDocumentation -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" started-at="2026-10-12T08:34:08 IST" name="closeBrowser" finished-at="2026-10-12T08:34:08 IST" duration-ms="84" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser(org.testng.ITestContext)[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" started-at="2026-10-12T08:34:08 IST" name="startBrowser" finished-at="2026-10-12T08:34:08 IST" duration-ms="576" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@13908f9c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="homePageLoads()[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" started-at="2026-10-12T08:34:08 IST" name="homePageLoads" description="UI TC_01 - Home page loads" finished-at="2026-10-12T08:34:10 IST" duration-ms="1571" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageLoads -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" started-at="2026-10-12T08:34:10 IST" name="closeBrowser" finished-at="2026-10-12T08:34:10 IST" duration-ms="88" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser(org.testng.ITestContext)[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" started-at="2026-10-12T08:34:10 IST" name="startBrowser" finished-at="2026-10-12T08:34:10 IST" duration-ms="558" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@13908f9c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="navigationIsVisible()[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" started-at="2026-10-12T08:34:10 IST" name="navigationIsVisible" description="UI TC_02 - Navigation is visible" finished-at="2026-10-12T08:34:12 IST" duration-ms="1272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigationIsVisible -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" started-at="2026-10-12T08:34:12 IST" name="closeBrowser" finished-at="2026-10-12T08:34:12 IST" duration-ms="82" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser(org.testng.ITestContext)[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" started-at="2026-10-12T08:34:12 IST" name="startBrowser" finished-at="2026-10-12T08:34:12 IST" duration-ms="564" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@13908f9c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="signInNavigationOpensAuthenticationPage()[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" started-at="2026-10-12T08:34:12 IST" name="signInNavigationOpensAuthenticationPage" description="UI TC_05 - Sign in navigation opens authentication page" finished-at="2026-10-12T08:34:14 IST" duration-ms="1349" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInNavigationOpensAuthenticationPage -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:org.cocoine.tests.ui.GoRestUiTest@5677323c]" started-at="2026-10-12T08:34:14 IST" name="closeBrowser" finished-at="2026-10-12T08:34:14 IST" duration-ms="84" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- org.cocoine.tests.ui.GoRestUiTest -->
+      <class name="org.cocoine.tests.ui.SampleUiTest">
+        <test-method is-config="true" signature="startBrowser(org.testng.ITestContext)[pri:0, instance:org.cocoine.tests.ui.SampleUiTest@130c12b7]" started-at="2026-10-12T08:34:02 IST" name="startBrowser" finished-at="2026-10-12T08:34:02 IST" duration-ms="872" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@13908f9c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="homePageLoads()[pri:0, instance:org.cocoine.tests.ui.SampleUiTest@130c12b7]" started-at="2026-10-12T08:34:02 IST" name="homePageLoads" description="Sample UI test using a generic page object" finished-at="2026-10-12T08:34:03 IST" duration-ms="372" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageLoads -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:org.cocoine.tests.ui.SampleUiTest@130c12b7]" started-at="2026-10-12T08:34:03 IST" name="closeBrowser" finished-at="2026-10-12T08:34:03 IST" duration-ms="81" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- org.cocoine.tests.ui.SampleUiTest -->
+    </test> <!-- ui-tests -->
+  </suite> <!-- cocoine-suite -->
 </testng-results>

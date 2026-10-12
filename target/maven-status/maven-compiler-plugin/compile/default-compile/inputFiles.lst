@@ -4,6 +4,6 @@
 /Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/main/java/org/cocoine/core/RestBaseClass.java
 /Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/main/java/org/cocoine/core/TestListener.java
 /Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/main/java/org/cocoine/pages/rest/SampleApi.java
-/Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/main/java/org/cocoine/pages/rest/gorest/GoRestApi.java
+/Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/main/java/org/cocoine/pages/rest/gorest/ApiClient.java
 /Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/main/java/org/cocoine/pages/ui/SamplePage.java
-/Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/main/java/org/cocoine/pages/ui/gorest/GoRestHomePage.java
+/Volumes/Work/workspaces/github-projects/CoCoInE-Selenium-TestNG/src/main/java/org/cocoine/pages/ui/gorest/HomePage.java

@@ -1,9 +1,9 @@
 org/cocoine/pages/rest/SampleApi.class
 org/cocoine/core/ResourceHelper.class
+org/cocoine/pages/ui/gorest/HomePage.class
 org/cocoine/core/BaseClass.class
-org/cocoine/pages/ui/gorest/GoRestHomePage.class
 org/cocoine/core/Config.class
+org/cocoine/pages/rest/gorest/ApiClient.class
 org/cocoine/core/RestBaseClass.class
-org/cocoine/pages/rest/gorest/GoRestApi.class
 org/cocoine/core/TestListener.class
 org/cocoine/pages/ui/SamplePage.class

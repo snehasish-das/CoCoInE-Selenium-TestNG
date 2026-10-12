@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="cocoine-suite" parallel="false">
+<suite name="cocoine-suite">
     <listeners>
         <listener class-name="org.cocoine.core.TestListener"/>
     </listeners>
